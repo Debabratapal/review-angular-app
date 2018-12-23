@@ -1,0 +1,51 @@
+<!-- <form> -->
+
+
+<!-- </form> -->
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="name">Name</label>
+        <input formControlName="name" [(ngModel)]="name" type="text" placeholder="name" />
+        <span
+        *ngIf="!commentForm.get('name').valid &&
+        commentForm.get('name').touched"
+        class='help-block'>
+            *Name is required!
+        </span>
+    </div>
+    <div class="form-control">
+        <label for="comment">Comment</label>
+        <textarea formControlName="comment" rows="3"></textarea>
+        <span
+        *ngIf="!commentForm.get('comment').valid &&
+        commentForm.get('comment').touched"
+        class='help-block'>
+            *comment is required!
+        </span>
+    </div>
+    <div class="review-section">
+        <div class="review">
+            <label for="review">Review</label>
+            <mat-slider 
+            [displayWith]="formatLabel" 
+            formControlName="review" 
+            tickInterval="1" 
+            [(ngModel)]="review"
+            min="1" max="10"></mat-slider>
+            <span
+        *ngIf="!commentForm.get('review').valid &&
+        commentForm.get('review').touched"
+        class='help-block'>
+            *review is required!
+        </span>
+        </div>
+        <div class="review-display">
+            <span>{{review || 0}} Stars</span>
+        </div>  
+    </div>
+    <div class="btn-section">
+        <button 
+        type="submit"
+        [disabled]="!commentForm.valid">Submit</button>
+    </div>
+</form>

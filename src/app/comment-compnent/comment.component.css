@@ -1,0 +1,75 @@
+* {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+form{
+    /* background: #ccc; */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.review-section {
+    display: flex;
+    justify-content: space-between;
+    /* background: #ccc; */
+    height: 20vh;
+    align-items: center;
+
+}
+
+.help-block {
+    font-size: 15px;
+    color: red;
+    padding: 2px 0px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color:yellow;
+  color: #666666;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-section button{
+    border: none;
+    background-color: teal;
+    color: aliceblue;
+    border-radius: 4px;
+    padding: 5px;
+    flex-basis: 200px;
+
+}
+
+.review-display span{
+    font-size: 25px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}

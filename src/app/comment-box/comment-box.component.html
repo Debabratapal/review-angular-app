@@ -1,0 +1,17 @@
+
+<ng-template *ngIf="!comments then  spinner else comment "></ng-template>
+<ng-template #comment>
+    <h4 class="no-comment" *ngIf="comments.length==0">No Comments yet</h4>
+    <ul *ngIf="comments.length>0">
+        <li *ngFor="let comment of comments">
+            <h3>
+                <span>{{comment.author}}</span>
+                <span>{{comment.review}} {{comment.review<2 ? 'Star' : 'Stars'}}</span>
+            </h3>
+            <p>{{comment.comment}}</p>
+        </li>
+    </ul>
+</ng-template>
+<ng-template #spinner>
+    <mat-spinner></mat-spinner>
+</ng-template>

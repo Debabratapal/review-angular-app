@@ -1,0 +1,11 @@
+<div  class="container">
+    <app-product 
+    [product]="product" 
+    *ngFor="let product of products"></app-product>
+</div>
+<mat-paginator 
+[pageSizeOptions]="itemArray"
+[pageSize]="itemPerPage"
+[length]="totalItems"
+[pageIndex]="pageIndex"
+(page)="paginatorChange($event)"></mat-paginator>

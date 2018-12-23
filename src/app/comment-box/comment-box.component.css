@@ -1,0 +1,28 @@
+* {
+    font-family: monospace;
+    list-style: none;
+}
+
+.no-comment {
+    text-align: center;
+    border-bottom: 1px solid#ccd;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccd;
+    padding: 5px 10px;
+    height: 27vh;
+    overflow: scroll;
+}
+li{
+    border-bottom: 1px solid #ccd;
+}
+
+h3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}

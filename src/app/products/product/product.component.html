@@ -1,0 +1,12 @@
+<div class="card" (click)="onCardClick(product._id)"> 
+    <img src="http://localhost:3001/{{product.image}}">
+    <div class="title">
+        <h3>{{product.name}}</h3>
+        <h3 
+        *ngIf="product.comments.length==0"
+        class="review">No reviews</h3>
+        <h3 
+        *ngIf="product.comments.length>0" 
+        class="review">{{product.review.toFixed(1)}} {{review<2 ? 'Star': 'Stars'}}</h3>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+
+<ng-template *ngIf="product then content else spinner"></ng-template>
+<ng-template #content>
+<div class="container">
+    <div>
+        <img src="http://localhost:3001/{{product.image}}">
+    </div>
+    <div class="side-bar">
+        <div class="title">
+            <span>{{product.name}}</span>
+            <span>{{review.toFixed(1)}} {{review<2 ? 'Star': 'Stars'}}</span>
+        </div>
+        <div>
+            <app-comment></app-comment>
+        </div>
+        <div>
+            <app-comment-box></app-comment-box>
+        </div>
+    </div>
+ </div>
+</ng-template>
+<ng-template #spinner>
+<mat-spinner></mat-spinner>
+</ng-template>
